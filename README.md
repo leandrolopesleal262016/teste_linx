@@ -1,6 +1,6 @@
 # Teste Linx App previsão do tempo
 
-Aplicação web feita em Python com a biblioteca django.
+Aplicação web feita em Python com a biblioteca django que é um framework bem prático para desenvolvimento web com python.
 
 App faz uma pesquisa sobre o clima da cidade informada no campo buscando as informaçoes através de requisição
 em https://openweathermap.org, insere os dados no banco de dados (postgreSQL) e mostra na interface 
