@@ -23,18 +23,21 @@ O App póssui filtro para evitar duplicidade de cidades e notifica quando a cida
     - Criar banco de Dados no posgresql com o nome "mydb" # Instruções para terminal linux Debian 9
         sudo su - postgres # acessa como usuario padrão do postgresql
         createdb mydb
-        psql mydb; # acessa o banco mysql
+        psql mydb # acessa o banco mysql
         
         Após acessar o banco com o comando acima:
 
         -Criar usuario admin:
-            createuser -a -d -E -P leandro; # cria o usuário
-            GRANT ALL PRIVILEGES ON DATABASE mydb TO leandro; # Concede os privilegios ao usuario
+            CREATE USER leandro SUPERUSER INHERIT CREATEDB CREATEROLE;
+        Depois entre com o comando:
 
+            ALTER USER leandro PASSWORD '5510';
+            
         - Dentro da pasta "the_weather" rodar o comando: (Pasta que contem o arquivo manage.py)
             python3 manage.py migrate # Para implementar as tabelas
             python3 manage.py runserver # Roda o servidor
-            acessar no navegador o endereço 127.0.0.1:8000
+           
+           acessar no navegador o endereço 127.0.0.1:8000
         
     Dados do servidor postgreSQL:
     
