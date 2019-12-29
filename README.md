@@ -1,10 +1,10 @@
 # Teste Linx App previsão do tempo
 
-Aplicação web feita em Python com a biblioteca django que é um framework bem prático para desenvolvimento web com python.
+Aplicação web feita em Python com a biblioteca django que é um framework bem prático para desenvolvimento web em python.
 
 App faz uma pesquisa sobre o clima da cidade informada no campo buscando as informaçoes através de requisição
 em https://openweathermap.org, insere os dados no banco de dados (postgreSQL) e mostra na interface 
-todas as cidades cadastradas e o seu clima, podendo ser removida do banco pela interface.
+todas as cidades pesquisadas e inseridas no banco com a informação de clima atualizada, podendo ser removida do banco pela interface atravéz do botão X.
 O App póssui filtro para evitar duplicidade de cidades e notifica quando a cidade digitada não existe.
 
 
@@ -39,15 +39,16 @@ O App póssui filtro para evitar duplicidade de cidades e notifica quando a cida
 
             ALTER USER leandro PASSWORD '5510';
             
-        - Criar a tabela "weather_city" no banco mydb
+        - Criar a tabela "weather_city" com os campos "id" e "nome" no banco mydb
         
             CREATE TABLE weather_city (id SERIAL PRIMARY KEY, name VARCHAR(25));
             
         - Dentro da pasta "the_weather" rodar o comando: (Pasta que contem o arquivo manage.py)
+        
             python3 manage.py migrate # Para implementar as tabelas
             python3 manage.py runserver # Roda o servidor
            
-           acessar no navegador o endereço 127.0.0.1:8000
+           Acessar no navegador o endereço 127.0.0.1:8000
         
     Dados do servidor postgreSQL:
     
