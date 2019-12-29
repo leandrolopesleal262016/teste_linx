@@ -11,16 +11,21 @@ O App póssui filtro para evitar duplicidade de cidades e notifica quando a cida
   Dependencias:
   
     - Python 3
+    
     - Instalar o django
+    
         sudo pip3 install django # Debian 9 
         
     - Ter instalado banco de dados postgreesql
+    
         sudo apt-get install postgresql postgresql-contrib # Debian 9
         
     -Instalar connector postgreesql para python 3 "psycopg2"
+    
         sudo apt-get install python3-psycopg2 # Debian 9
 
     - Criar banco de Dados no posgresql com o nome "mydb" # Instruções para terminal linux Debian 9
+    
         sudo su - postgres # acessa como usuario padrão do postgresql
         createdb mydb
         psql mydb # acessa o banco mysql
@@ -29,9 +34,14 @@ O App póssui filtro para evitar duplicidade de cidades e notifica quando a cida
 
         -Criar usuario admin:
             CREATE USER leandro SUPERUSER INHERIT CREATEDB CREATEROLE;
+            
         Depois entre com o comando:
 
             ALTER USER leandro PASSWORD '5510';
+            
+        - Criar a tabela "weather_city" no banco mydb
+        
+            CREATE TABLE weather_city (id SERIAL PRIMARY KEY, name VARCHAR(25));
             
         - Dentro da pasta "the_weather" rodar o comando: (Pasta que contem o arquivo manage.py)
             python3 manage.py migrate # Para implementar as tabelas
