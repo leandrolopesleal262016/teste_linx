@@ -1,4 +1,4 @@
-# Teste Linx App previsão do tempo
+# App previsão do tempo
 
 Aplicação web feita em Python com a biblioteca django que é um framework bem prático para desenvolvimento web em python.
 
